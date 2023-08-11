@@ -21,7 +21,7 @@ local meleeWeapons = {
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-        local playerPed = GetPlayerPed(-1)
+        local playerPed = PlayerPedID()
         local currentWeapon = GetSelectedPedWeapon(playerPed)
 
         if currentWeapon ~= nil and currentWeapon ~= 0 then
@@ -45,7 +45,7 @@ end)
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-        local playerPed = GetPlayerPed(-1)
+        local playerPed = PlayerPedID()
         local currentWeapon = GetSelectedPedWeapon(playerPed)
         local weaponType = GetWeapontypeGroup(currentWeapon)
         local isMelee = false
